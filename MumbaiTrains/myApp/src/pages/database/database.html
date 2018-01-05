@@ -1,0 +1,64 @@
+<!--
+  Generated template for the DatabasePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+   <ion-navbar>
+      <ion-title>{{ pageTitle }}</ion-title>
+   </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+   <div>
+      
+
+
+      <div *ngIf="!hideForm">
+         <form [formGroup]="form" (ngSubmit)="saveEntry()">
+
+            <ion-list>
+               <ion-item-group>
+                  <ion-item-divider color="light">User Name *</ion-item-divider>
+                  <ion-item>
+                     <ion-input
+                        type="text"
+                        placeholder="Enter a name..."
+                        formControlName="userName"
+                        [(ngModel)]="userName"></ion-input>
+                  </ion-item>
+               </ion-item-group>
+
+
+               <ion-item-group>
+                  <ion-item-divider color="light">Password *</ion-item-divider>
+                  <ion-item>
+                     <ion-textarea
+                        placeholder="Password..."
+                        formControlName="password"
+                        rows="6"
+                        [(ngModel)]="password"></ion-textarea>
+                  </ion-item>
+               </ion-item-group>
+
+
+               <ion-item>
+                  <button
+                     ion-button
+                     color="primary"
+                     text-center
+                     block
+                     [disabled]="!form.valid">Register</button>
+               </ion-item>
+
+            </ion-list>
+
+         </form>
+      </div>
+   </div>
+
+
+</ion-content>

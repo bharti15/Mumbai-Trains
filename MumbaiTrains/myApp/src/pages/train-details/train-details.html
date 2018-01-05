@@ -1,0 +1,33 @@
+<!--
+  Generated template for the TrainDetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>trainDetails</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="trainDetails">
+
+	<ion-grid *ngIf="station">
+		<ion-row id="stn">
+			<ion-col width-50 offset-25>
+				<ion-list>
+					<ion-item *ngFor = "let counter of station; let i = index">
+  						{{station[i]}} <br>
+  						
+					</ion-item>
+				</ion-list>
+			</ion-col>
+		</ion-row>
+		
+	</ion-grid>
+
+</ion-content>
+
